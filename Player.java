@@ -106,13 +106,13 @@ class Player {
     }
     // Retourne la valeur TRUE si p est réservé
     private static boolean isReserved(Point p) {
-        boolean alloué = false;
-        for (int i = 0; i < N && !alloué; ++i) {
+        boolean valeur = false;
+        for (int i = 0; i < N && !valeur; ++i) {
             if (reserved.get(i) != null) {
-                if (reserved.get(i).contains(p)) { alloué = true; }
+                if (reserved.get(i).contains(p)) { valeur = true; }
             }
         }
-        return alloué;
+        return valeur;
     }
     
     // Retourne la valeur TRUE si p est dans la grille du jeu
